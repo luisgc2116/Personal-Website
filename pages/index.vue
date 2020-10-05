@@ -1,73 +1,89 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        portfolio
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+  <div class="main--outer-wrapper">
+    <div class="main--scroll">
+      <ScrollElement :headers="headers" />
+    </div>
+
+    <div class="main--introduction">
+      <BlackHoleBackground />
+    </div>
+
+    <div class="main--down-arrow">
+      <DownArrow v-scroll-to="{ el: '#About' }" />
+    </div>
+
+    <div class="main--about" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+      <lazy-about-section id="About" />
+    </div>
+
+    <!-- SKILLS SECTION -->
+    <div class="main--skills" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+      <lazy-skills-section id="Skills" />
+    </div>
+
+    <!-- TIMELINE SECTION -->
+    <div class="main--timeline" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+      <lazy-timeline-block id="Timeline" />
+    </div>
+
+    <div class="main--contact" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+      <lazy-contact-section id="Contact" />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      headers: [
+        { name: "About Me", id: "#About" },
+        { name: "Skills", id: "#Skills" },
+        { name: "Experience", id: "#Timeline" },
+        { name: "Contact", id: "#Contact" },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss" scoped>
+@keyframes fadeIn-down-arrow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.main--down-arrow {
+  animation: fadeIn-down-arrow 3s;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.main--scroll {
+  animation: fadeIn-scroll 2s;
 }
 
-.links {
-  padding-top: 15px;
+.main--outer-wrapper {
+  background: #002142;
+}
+
+.main--about {
+  animation: fadeIn-about 2s;
 }
 </style>
