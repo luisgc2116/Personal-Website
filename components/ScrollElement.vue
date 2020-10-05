@@ -68,19 +68,11 @@ export default {
   padding: 6px;
 }
 
-.scroll--elem-li {
-  color: red;
-}
-
 .scroll--vertical-line {
   height: 65px;
   border-left: 1px solid #9e9a9ab8;
   margin: 13px 0;
   margin-left: 40%;
-}
-
-.vs-radio__effect:after {
-  background-color: red;
 }
 
 ul {
