@@ -1,7 +1,7 @@
 <template>
   <div>
     <svg
-      v-if="icon==='github'"
+      v-if="icon === 'github'"
       class="icon"
       viewBox="0 0 438 438"
       xmlns="http://www.w3.org/2000/svg"
@@ -11,7 +11,7 @@
       />
     </svg>
     <svg
-      v-if="icon==='linkedin'"
+      v-if="icon === 'linkedin'"
       class="icon"
       viewBox="0 0 430.1 430.1"
       xmlns="http://www.w3.org/2000/svg"
