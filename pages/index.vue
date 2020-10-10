@@ -8,25 +8,41 @@
       <BlackHoleBackground />
     </div>
 
-    <div class="main--down-arrow">
-      <DownArrow v-scroll-to="{ el: '#About' }" />
-    </div>
-
-    <div class="main--about" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+    <div
+      class="main--about"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-duration="1200"
+    >
       <lazy-about-section id="About" />
     </div>
 
     <!-- SKILLS SECTION -->
-    <div class="main--skills" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+    <div
+      class="main--skills"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-duration="1200"
+    >
       <lazy-skills-section id="Skills" />
     </div>
 
     <!-- TIMELINE SECTION -->
-    <div class="main--timeline" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+    <div
+      class="main--timeline"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-duration="1200"
+    >
       <lazy-timeline-block id="Timeline" />
     </div>
 
-    <div class="main--contact" data-aos="fade-up" data-aos-easing="ease" data-aos-duration="1200">
+    <div
+      class="main--contact"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-duration="1200"
+    >
       <lazy-contact-section id="Contact" />
     </div>
   </div>
