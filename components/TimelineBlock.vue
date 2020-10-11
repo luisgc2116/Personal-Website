@@ -38,11 +38,21 @@
 
     </div>
 
+    <div class="timeline--downarrow">
+      <DownArrow v-scroll-to="{ el: scrollTo }" />
+    </div>
+
   </div>
 </template>
 
 <script>
   export default {
+    props: {
+      scrollTo: {
+        type: String,
+        required: true,
+      },
+    },
     data() {
       return {
         blockData: [
@@ -116,6 +126,10 @@
 
   .timeline--wrapper {
     animation: fadeIn-wrapper 1.5s;
+  }
+
+  .timeline--downarrow {
+    padding: 80px;
   }
 
 
@@ -323,6 +337,93 @@
         width: 2px;
         background: $divider-color;
       }
+    }
+
+  }
+
+  @media only screen and (max-width: 560px) {
+    .timeline {
+      text-align: center;
+      margin: 10% auto;
+      letter-spacing: 1px;
+      width: 70%;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+
+    .timeline--header-title {
+      font-size: 200%;
+      padding: .6% 0;
+      width: fit-content;
+      margin: 10% auto;
+      margin-bottom: 0%;
+      color: rgb(223, 223, 223);
+    }
+
+    .timeline--experience-block {
+      padding: 15px;
+    }
+
+    .timeline--experience-content-left, .timeline--experience-content-right {
+      float: left !important;
+      position: relative;
+      background: $block-color;
+      border-radius: 10px;
+      margin-left: 0;
+      padding: 1.5em;
+      width: 290px;
+      height: 200px;
+      overflow: auto;
+      opacity: .85;
+      transition: all .3s ease;
+      margin-left: 13%;
+      margin-right: auto;
+    }
+
+    .timeline--experience-content-left::before {
+      left: -30px;
+      border: 15px solid transparent;
+      border-color: transparent;
+      border-right-color: $block-color;
+    }
+
+    .timeline--experience-section {
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(10% - 1px);
+        height: 100%;
+        width: 2px;
+        background: $divider-color;
+      }
+    }
+
+    .timeline--experience-title {
+      font-size: 125%;
+      font-weight: 500;
+      color: $title-color;
+    }
+
+    .timeline--experience-subtitle {
+      font-size: 105%;
+      padding-top: .4%;
+      color: $subtitle-color;
+    }
+
+    .timeline--experience-date {
+      font-size: 65%;
+      padding-top: .4%;
+      color: $subtitle-color;
+    }
+
+    .timeline--experience-body {
+      font-size: 70%;
+      letter-spacing: 1px;
+      padding: 2.5% 0;
+      text-align: left;
+      color: $body-color;
     }
 
   }

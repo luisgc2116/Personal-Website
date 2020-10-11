@@ -63,17 +63,17 @@ export default {
   $button-color: #64ffdb28;
 
   p {
-    color: white;
+    color: rgba(255, 255, 255, 0.842);
   }
 
   .about--downarrow {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
   .about {
     max-width: 1340px;
-    margin: 100px auto;
-    padding: 200px 0;
+    margin: 150px auto;
+    padding: 30px 0;
     text-align: center;
   }
 
@@ -85,7 +85,7 @@ export default {
 
   .about--header {
     padding: 3%;
-    padding-bottom: 1%;
+    padding-bottom: 0;
     text-align: center;
     font-size: 35px;
     font-family: 'Quattrocento', serif;
@@ -93,13 +93,13 @@ export default {
 
   .about--header-hr {
     margin: 0 auto;
-    width: 10%;
+    width: 60px;
     border-color: $text-title;
   }
 
   .about--container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0 auto;
     padding-top: 50px;
   }
@@ -109,6 +109,8 @@ export default {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 40px;
   }
 
   .about--image-wrapper{
@@ -145,8 +147,9 @@ export default {
   }
   
   .about--right-col-wrapper {
-    width: 70%;
+    width: 100%;
     padding: 0 3%;
+    margin: 0 auto;
     display: inline-block !important;
     
     display: flex;
@@ -160,7 +163,7 @@ export default {
   }
 
   .about--right-col-block-body {
-    padding-bottom: 12%;
+    padding-bottom: 15px;
   }
 
   .about--right-col-block-body-text {
@@ -173,12 +176,12 @@ export default {
   .highlight {
     font-size: 115%;
     font-weight: 700;
-    color: #efefef;
-    box-shadow: 0px 2px rgb(255 239 239 / 33%), 0px 4px rgb(255 239 239 / 16%);
+    color: #efefefe5;
+    // box-shadow: 0px 2px rgb(255 239 239 / 33%), 0px 4px rgb(255 239 239 / 16%);
   }
 
   .redbull {
-    color: rgba(251, 90, 104, 0.774);
+    color: rgba(250, 226, 228, 0.774);
   }
 
   .about--image-block-text {
@@ -224,6 +227,10 @@ export default {
       letter-spacing: .4px;
       font-size: 16px;
     }
+
+    .about--left-col-wrapper {
+      width: 370px;
+    }
   }
 
   @media only screen and (min-width: 930px) and (max-width: 1040px)  {
@@ -233,17 +240,21 @@ export default {
     }
 
     .about--left-col-wrapper {
-      width: 40%;
+      width: 330px;
     }
 
     .about--right-col-wrapper {
-      width: 60%;
+      width: 90%;
     }
 
     .about--right-col-block-body-text {
       padding-bottom: 20px;
       letter-spacing: .4px;
       font-size: 16px;
+    }
+
+    .about--downarrow {
+      padding-top: 50px;
     }
   }
 
@@ -275,6 +286,10 @@ export default {
       letter-spacing: .4px;
       font-size: 16px;
     }
+
+    .about--downarrow {
+      padding-top: 50px;
+    }
   }
 
   @media only screen and (max-width: 500px)  {
@@ -292,6 +307,7 @@ export default {
     }
 
     .about--left-col-wrapper {
+      max-width: 300px;
       width: 90%;
       margin: 0 auto;
       padding-bottom: 40px;
@@ -304,7 +320,11 @@ export default {
     .about--right-col-block-body-text {
       padding-bottom: 20px;
       letter-spacing: .4px;
-      font-size: 100%;
+      font-size: 90%;
+    }
+
+    .about--downarrow {
+      padding-top: 10px;
     }
   }
 

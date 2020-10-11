@@ -35,7 +35,7 @@
       data-aos-easing="ease"
       data-aos-duration="1200"
     >
-      <lazy-timeline-block id="Timeline" />
+      <lazy-timeline-block id="Timeline" scrollTo="#Contact" />
     </div>
 
     <div

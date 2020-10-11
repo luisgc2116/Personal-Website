@@ -198,14 +198,14 @@ ul, ol {
 
 // Outer Wrappers
 .skills {
-  margin: 50px auto;
-  padding: 100px 0;
+  margin: 80px auto;
+  padding: 50px 0;
   text-align: center;
 }
 
 .skills--wrapper {
   padding: 10% 25%;
-  padding-bottom: 18%;
+  padding-bottom: 70px;
   text-align: left;
 }
 
@@ -385,29 +385,6 @@ ul, ol {
   animation: fadeIn 1s;
   vertical-align: top;
 }
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.3); 
-  border-radius: 10px;
-
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(219, 219, 219, 0.8); 
-  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(255, 255, 255, 0.4); 
-}
-
-
 
 
 

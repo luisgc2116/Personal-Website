@@ -78,4 +78,11 @@ export default {
 ul {
   list-style-type: none;
 }
+
+
+  @media only screen and (max-width: 640px) {
+    .scroll--wrapper {
+      display: none;
+    }
+  }
 </style>

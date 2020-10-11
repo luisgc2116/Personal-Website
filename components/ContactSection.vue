@@ -36,12 +36,12 @@
 
 <style lang="scss" scoped>
 
-  $text-color: rgba(255, 255, 255, 0.616);
+  $text-color: rgba(255, 255, 255, 1);
   $text-color-body: rgba(255, 255, 255, 0.835);
   $text-color-hover: rgba(255, 255, 255, 0.616);
   $hover-color: #5bbe5d21;
   $text-color-main: #64ffda;
-  $text-title: rgb(223, 223, 223);
+  $text-title: rgb(255, 246, 246);
   $border-color: rgba(255, 255, 255, 0.329);
   $button-color: #64ffdb28;
 
@@ -49,6 +49,10 @@
     0% { opacity: 0; transform: translateY(5%);}
     50% { opacity: 0; transform: translateY(5%);}
     100% { opacity: 1; transform: translateY(0%);}
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.918);
   }
 
   .contact--header, .contact--header-hr {
@@ -68,7 +72,7 @@
 
   .contact--header-hr {
     margin: 0 auto;
-    margin-bottom: 4%;
+    margin-bottom: 5%;
     width: 10%;
     border-color: $text-title;
   }
@@ -76,7 +80,7 @@
   .contact {
     margin: 0 auto;
     padding: 8% 0;
-    padding-bottom: 3%;
+    padding-bottom: 200px;
     text-align: center;
   }
 
