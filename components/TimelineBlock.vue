@@ -158,7 +158,7 @@
   .timeline--header-hr {
     margin: 0 auto;
     margin-bottom: 4%;
-    width: 10%;
+    width: 100px;
     border-color: rgb(135 , 144, 145);
   }
 
@@ -365,7 +365,7 @@
     }
 
     .timeline--experience-block {
-      padding: 15px;
+      padding: 15px 0;
     }
 
     .timeline--experience-content-left, .timeline--experience-content-right {
@@ -375,12 +375,12 @@
       border-radius: 10px;
       margin-left: 0;
       padding: 1.5em;
-      width: 290px;
+      width: 100%;
       height: 200px;
       overflow: auto;
       opacity: .85;
       transition: all .3s ease;
-      margin-left: 13%;
+      margin-left: 0;
       margin-right: auto;
     }
 
@@ -398,7 +398,7 @@
         position: absolute;
         top: 0;
         left: calc(10% - 1px);
-        height: 100%;
+        height: 0%;
         width: 2px;
         background: $divider-color;
       }
