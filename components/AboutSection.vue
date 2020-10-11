@@ -147,7 +147,7 @@ export default {
   }
   
   .about--right-col-wrapper {
-    width: 100%;
+    width: 80%;
     padding: 0 3%;
     margin: 0 auto;
     display: inline-block !important;

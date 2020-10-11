@@ -120,6 +120,10 @@
     100% { opacity: 1; transform: translateY(0%);}
   }
 
+  p {
+    font-family: 'Quattrocento', serif;
+  }
+
   .timeline--header {
     animation: fadeIn-header 1s;
   }

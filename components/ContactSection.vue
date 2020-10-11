@@ -53,6 +53,7 @@
 
   p {
     color: rgba(255, 255, 255, 0.918);
+    font-family: 'Quattrocento', serif;
   }
 
   .contact--header, .contact--header-hr {
