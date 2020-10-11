@@ -2,7 +2,7 @@
   <div class="main--outer-wrapper">
     <div class="main--scroll">
       <ScrollElement :headers="headers" />
-    </div>
+    </div> 
 
     <div class="main--introduction">
       <BlackHoleBackground scrollTo="#About" />
