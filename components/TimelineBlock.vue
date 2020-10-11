@@ -1,37 +1,41 @@
 <template>
   <div class="timeline">  
+
+    <div class="timeline--outer-wrapper">
     
-    <div class="timeline--header">
-      <p class="timeline--header-title">
-        Experience Timeline
-      </p>
-      <hr class="timeline--header-hr">
-    </div>
+      <div class="timeline--header">
+        <p class="timeline--header-title">
+          Experience Timeline
+        </p>
+        <hr class="timeline--header-hr">
+      </div>
 
-    <div class="timeline--wrapper">
-      <div class="timeline--sections">
-        <div class="timeline--experience">
-          
-          <div class="timeline--experience-section"></div>
+      <div class="timeline--wrapper">
+        <div class="timeline--sections">
+          <div class="timeline--experience">
+            
+            <div class="timeline--experience-section"></div>
 
 
-            <!-- TIMELINE BLOCKS -->
-            <div class="timeline--experience-blocks">
+              <!-- TIMELINE BLOCKS -->
+              <div class="timeline--experience-blocks">
 
-              <div class="timeline--experience-block" v-for="(block, index) in blockData" :key="index"> 
-                <div :class="blockPosition(index)">
-                  <p class="timeline--experience-title"> {{ block.title }} </p>
-                  <p class="timeline--experience-subtitle"> {{ block.subtitle }} </p>
-                  <p class="timeline--experience-date"> {{ block.date }} </p>
-                  <p class="timeline--experience-body"> {{ block.body }} </p>
+                <div class="timeline--experience-block" v-for="(block, index) in blockData" :key="index"> 
+                  <div :class="blockPosition(index)">
+                    <p class="timeline--experience-title"> {{ block.title }} </p>
+                    <p class="timeline--experience-subtitle"> {{ block.subtitle }} </p>
+                    <p class="timeline--experience-date"> {{ block.date }} </p>
+                    <p class="timeline--experience-body"> {{ block.body }} </p>
+                  </div>
                 </div>
+
               </div>
 
-            </div>
 
-
+          </div>
         </div>
       </div>
+
     </div>
 
   </div>
@@ -114,10 +118,14 @@
     animation: fadeIn-wrapper 1.5s;
   }
 
+
+
+  // Outer wrappers
   .timeline {
     text-align: center;
     margin: 10% auto;
     letter-spacing: 1px;
+    width: 1000px;
   }
 
   .timeline--header-title {
@@ -139,18 +147,16 @@
   .timeline--wrapper {
     width: 100%;
     height: auto;
-    min-height: 700px;
-    padding: 0;
-    overflow: hidden;
     color: #f2f2f2;
     position: relative;
-    padding: 0 20%;
+    padding: 0;
   }
 
   .timeline--experience-block {
     display: flex;
     flex-direction: column;
     padding: 1%;
+    // width: 883pxs;
   }
 
   .timeline--experience-section {
@@ -163,10 +169,13 @@
       height: 100%;
       width: 2px;
       background: $divider-color;
+      margin-top: 25px;
     }
   }
 
   .timeline--experience-blocks {
+
+    padding-top: 25px;
     
     &::before{
       top: 24px;
@@ -240,22 +249,82 @@
     font-weight: 500;
     color: $title-color;
   }
+
   .timeline--experience-subtitle {
     font-size: 115%;
     padding-top: .4%;
     color: $subtitle-color;
   }
+
   .timeline--experience-date {
     font-size: 85%;
     padding-top: .4%;
     color: $subtitle-color;
   }
+
   .timeline--experience-body {
     font-size: 90%;
     letter-spacing: 1px;
     padding: 2.5% 0;
     text-align: left;
     color: $body-color;
+  }
+
+  @media only screen and (max-width: 1010px) {
+    .timeline {
+      text-align: center;
+      margin: 10% auto;
+      letter-spacing: 1px;
+      width: 800px;
+    }
+  }
+
+  @media only screen and (max-width: 810px) {
+    .timeline {
+      text-align: center;
+      margin: 10% auto;
+      letter-spacing: 1px;
+      width: 70%;
+    }
+
+    .timeline--experience-block {
+      padding: 15px;
+    }
+
+    .timeline--experience-content-left, .timeline--experience-content-right {
+      float: left !important;
+      position: relative;
+      background: $block-color;
+      border-radius: 10px;
+      margin-left: 0;
+      padding: 1.5em;
+      width: 80%;
+      opacity: .85;
+      transition: all .3s ease;
+      margin-left: 13%;
+      margin-right: auto;
+    }
+
+    .timeline--experience-content-left::before {
+      left: -30px;
+      border: 15px solid transparent;
+      border-color: transparent;
+      border-right-color: $block-color;
+    }
+
+    .timeline--experience-section {
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: calc(10% - 1px);
+        height: 100%;
+        width: 2px;
+        background: $divider-color;
+      }
+    }
+
   }
 
 </style>

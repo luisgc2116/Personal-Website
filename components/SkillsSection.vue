@@ -1,7 +1,7 @@
 <template>
   <div class="skills">
     <div class="skills--wrapper">
-      <p class="skills--header">Experience and Skills</p>
+      <p class="skills--header">Skills and Experience</p>
       <hr class="skills--header-hr" />
 
       <div class="skills--container">
@@ -45,7 +45,7 @@
                   :key="index"
                   class="skills--right-col-block-body-li"
                 >
-                  {{ text }}
+                  <p> {{ text }} </p>
                 </li>
               </ul>
             </div>
@@ -66,13 +66,19 @@
     </div>
 
     <div class="skills--downarrow">
-      <DownArrow v-scroll-to="{ el: '#About' }" />
+      <DownArrow v-scroll-to="{ el: scrollTo }" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    scrollTo: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       picked: "One",
@@ -88,7 +94,7 @@ export default {
             "For Machine Learning Engineering, some of my responsabilities have included:",
           value: "One",
           body: [
-            "Actively researching and prototyping machine learning models to personalize product recommendations.",
+            "Actively researching and prototyping machine learning models to personalize product recommendations",
             "Deploying machine learning models on cloud services as part of an end-to- end machine learning workflow",
             "Developing & maintaning end-to-end machine learning pipelines that are scalable and cost effective",
           ],
@@ -179,6 +185,156 @@ $text-title: rgb(223, 223, 223);
 $border-color-right: rgba(255, 255, 255, 0.329);
 $button-color: #64ffdb28;
 
+p {
+  font-family: 'Quattrocento', serif;
+  color: white;
+}
+
+ul, ol {
+  margin: 0 auto;
+  padding-left: 10%;
+  list-style: circle;
+}
+
+// Outer Wrappers
+.skills {
+  margin: 50px auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.skills--wrapper {
+  padding: 10% 25%;
+  padding-bottom: 18%;
+  text-align: left;
+}
+
+.skills--header {
+  color: $text-title;
+  padding: 3%;
+  padding-bottom: 1%;
+  text-align: center;
+  font-size: 250%;
+}
+
+.skills--header-hr {
+  margin: 0 auto;
+  width: 10%;
+  border-color: $text-title;
+}
+
+.skills--container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+// RIGHT COLUMN
+.skills--right-col-wrapper {
+  width: 75%;
+  padding: 0 3%;
+  color: $text-color;
+  display: inline-block !important;
+  height: 350px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  overflow: auto;
+}
+
+.skills--right-col-block-title {
+  color: $text-color-body;
+  padding: 2% 0;
+}
+
+.skills--right-col-block-body {
+  padding-bottom: 12%;
+}
+
+.skills--right-col-block-body-li {
+  padding: 1% 0;
+}
+
+.skills--right-col-block-tags-title {
+  color: $text-color-body;
+}
+
+.skills--right-col-block-tags-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.skills--right-col-block-tag {
+  margin: 2% 0;
+  margin-right: 2%;
+  padding: 1%;
+  border: 1px solid rgb(75, 226, 75);
+  border-radius: 5px;
+  width: max-content;
+  background-color: $button-color;
+  color: $text-color-body;
+}
+
+// LEFT COLUMN
+.skills--left-col-wrapper {
+  width: 25%;
+  padding: 0 3%;
+  padding-bottom: 100px;
+  color: $text-color;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.skills--radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .skills--radio-btn-input {
+    opacity: 0;
+    background-color: $hover-color;
+    position: absolute;
+    padding: 2%;
+    height: 35px;
+  }
+
+  .skills--radio-btn {
+    border-right: 2px solid $border-color-right;
+    border-radius: 10px 0px 0px 10px;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}
+
+.active {
+  background-color: $hover-color;
+  color: $text-color-main;
+  border-right: 2px solid $text-color-main !important;
+}
+
+.skills--radio-btn-text {
+  padding: 15px;
+  text-align: center;
+
+  &:hover {
+    color: $text-color-main;
+  }
+}
+
+
+
+
+// Animations
 @keyframes fadeIn-skills-header {
   0% {
     opacity: 0;
@@ -208,6 +364,14 @@ $button-color: #64ffdb28;
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .skills--header,
 .skills--header-hr {
   animation: fadeIn-skills-header 1s;
@@ -222,160 +386,144 @@ $button-color: #64ffdb28;
   vertical-align: top;
 }
 
-.skills--header-hr {
-  margin: 0 auto;
-  margin-bottom: 4%;
-  width: 10%;
-  border-color: $text-title;
+::-webkit-scrollbar {
+  width: 4px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(173, 173, 173, 0.3); 
+  border-radius: 10px;
+
 }
 
-.skills--right-col-block-body {
-  padding-bottom: 12%;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(219, 219, 219, 0.8); 
+  box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255, 255, 255, 0.4); 
 }
 
-.skills--right-col-block-title {
-  color: $text-color-body;
-  padding: 2% 0;
-}
 
-.skills--right-col-block-tags-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
 
-.skills--right-col-block-tag {
-  margin: 2% 0;
-  margin-right: 2%;
-  padding: 1%;
-  border: 1px solid rgb(75, 226, 75);
-  border-radius: 5px;
-  width: max-content;
-  background-color: $button-color;
-  color: $text-color-body;
-}
 
-.skills {
-  margin: 0 auto;
-  text-align: center;
-}
 
-.skills--wrapper {
-  padding: 10% 25%;
-  padding-bottom: 18%;
-  text-align: left;
-}
-
-.skills--header {
-  color: $text-title;
-  padding: 3%;
-  padding-bottom: 1%;
-  text-align: center;
-  font-size: 250%;
-}
-
-.skills--container {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-}
-
-.skills--left-col-wrapper {
-  width: 25%;
-  padding: 0 3%;
-  color: $text-color;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.skills--right-col-wrapper {
-  width: 75%;
-  padding: 0 3%;
-  color: $text-color;
-  display: inline-block !important;
-  height: 250px;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.row--col-left {
-  width: 25%;
-  padding: 0 3%;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.row--col-right {
-  width: 75%;
-  color: $text-color;
-}
-
-.active {
-  background-color: $hover-color;
-  color: $text-color-main;
-  border-right: 2px solid $text-color-main !important;
-}
-
-.skills--radio-btn-text {
-  padding: 15px;
-  text-align: center;
-
-  &:hover {
-    color: $text-color-main;
+@media only screen and (max-width: 1450px) {
+  .skills--wrapper {
+    padding: 10% 10%;
   }
 }
 
-.skills--radio-wrapper {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+@media only screen and (max-width: 1050px) {
+  .skills--wrapper {
+    padding: 10% 0%;
+  }
+}
 
-  .skills--radio-btn-input {
-    opacity: 0;
-    background-color: $hover-color;
-    position: absolute;
-    padding: 2%;
-    height: 35px;
+@media only screen and (max-width: 812px) {
+
+  .skills {
+    padding: 50px 0;
+  }
+
+  .skills--wrapper {
+    padding: 10% 0%;
+  }
+
+  .skills--container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .skills--left-col-wrapper {
+    width: 100%;
+    padding: 0 3%;
+    padding-bottom: 15px;
+  }
+
+  .skills--radio-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.329);
   }
 
   .skills--radio-btn {
-    border-right: 2px solid $border-color-right;
-    border-radius: 10px 0px 0px 10px;
-    transition: all 0.5s;
+    flex-basis: 25%;
+    flex-grow: 0;
+    line-height: 100% !important;
+    overflow:visible;
+    border-radius: 0 !important;
 
-    &:hover {
-      background-color: $hover-color;
+    &:nth-child(4) {
+      border-right: none !important;
     }
   }
+
+  .active {
+    border-right: 2px solid rgba(255, 255, 255, 0.329) !important;
+    border-bottom: 2px solid #64ffda !important;
+  }
+
+  .skills--right-col-wrapper {
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 100% !important;
+  }
+
 }
 
-.skills--right-col-block-tags-title {
-  color: $text-color-body;
-}
+@media only screen and (max-width: 600px) {
 
-.skills--right-col-block-body-li {
-  padding: 1% 0;
-}
-
-@media only screen and (max-width: 640px) {
   .skills--wrapper {
+    padding: 10% 0%;
+  }
+
+  .skills--header {
+    font-size: 30px;
+  }
+
+  .skills--container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+
+  .skills--left-col-wrapper {
+    width: 100%;
+    padding: 0 3%;
+    padding-bottom: 15px;
+  }
+
+  .skills--radio-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.329);
+  }
+
+  .skills--radio-btn {
+    flex-basis: 25%;
+    flex-grow: 0;
+    line-height: 50% !important;
+    border-radius: 0 !important;
+  }
+  
+  .skills--radio-btn-text {
+    visibility: hidden !important;
     padding: 0;
   }
+
+  .active {
+    border-right: none !important;
+    border-bottom: 2px solid #64ffda !important;
+  }
+
 }
+
 </style>

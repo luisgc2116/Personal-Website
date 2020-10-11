@@ -10,11 +10,6 @@
           <div class="about--image-wrapper">
             <div class="about--image-block">
               <img class="about--image-im" src="profile.png" alt="">
-              <!-- <v-img
-                src="profile.png"
-                gradient="to top right, rgba(100,115,201,.13), rgba(25,32,72,.3)"
-                :elevation="25"
-              ></v-img> -->
             </div>
           </div>
 
@@ -39,13 +34,21 @@
 
       </div>
     </div>
+    <div class="about--downarrow">
+      <DownArrow v-scroll-to="{ el: scrollTo }" />
+    </div>
   </div>
 </template>
 
 <script>
-  export default {
-  }
-  
+export default {
+  props: {
+    scrollTo: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -61,6 +64,10 @@
 
   p {
     color: white;
+  }
+
+  .about--downarrow {
+    padding-top: 100px;
   }
 
   .about {
@@ -216,7 +223,6 @@
       padding-bottom: 20px;
       letter-spacing: .4px;
       font-size: 16px;
-      font-family: 'Quattrocento', serif;
     }
   }
 
@@ -238,7 +244,6 @@
       padding-bottom: 20px;
       letter-spacing: .4px;
       font-size: 16px;
-      font-family: 'Quattrocento', serif;
     }
   }
 
@@ -269,14 +274,14 @@
       padding-bottom: 20px;
       letter-spacing: .4px;
       font-size: 16px;
-      font-family: 'Quattrocento', serif;
     }
   }
 
   @media only screen and (max-width: 500px)  {
 
     .about {
-      margin: 100px 20px;
+      margin: 50px 20px;
+      padding: 50px 0;
     }
 
     .about--container {
@@ -300,7 +305,6 @@
       padding-bottom: 20px;
       letter-spacing: .4px;
       font-size: 100%;
-      font-family: 'Quattrocento', serif;
     }
   }
 

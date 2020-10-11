@@ -8,15 +8,14 @@
       <BlackHoleBackground scrollTo="#About" />
     </div>
 
-    <!-- <AboutMeTest /> -->
-
+    <!-- SKILLS SECTION -->
     <div
       class="main--about"
       data-aos="fade-up"
       data-aos-easing="ease"
       data-aos-duration="1200"
     >
-      <lazy-about-section id="About" />
+      <lazy-about-section id="About" scrollTo="#Skills" />
     </div>
 
     <!-- SKILLS SECTION -->
@@ -26,7 +25,7 @@
       data-aos-easing="ease"
       data-aos-duration="1200"
     >
-      <lazy-skills-section id="Skills" />
+      <lazy-skills-section id="Skills" scrollTo="#Timeline" />
     </div>
 
     <!-- TIMELINE SECTION -->
