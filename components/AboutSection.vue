@@ -10,6 +10,11 @@
           <div class="about--image-wrapper">
             <div class="about--image-block">
               <img class="about--image-im" src="profile.png" alt="">
+              <!-- <v-img
+                src="profile.png"
+                gradient="to top right, rgba(100,115,201,.13), rgba(25,32,72,.3)"
+                :elevation="25"
+              ></v-img> -->
             </div>
           </div>
 
@@ -54,46 +59,19 @@
   $border-color-right: rgba(255, 255, 255, 0.329);
   $button-color: #64ffdb28;
 
-  @keyframes fadeIn-about {
-    0% { opacity: 0; transform: translateY(5%);}
-    50% { opacity: 0; transform: translateY(5%);}
-    100% { opacity: 1; transform: translateY(0%);}
-  }
-
-  .about--header, .about--header-hr {
-    animation: fadeIn-about 1s ;
-  }
-
-  .about--container {
-    animation: fadeIn-about 1.5s ;
-  }
-
-  .highlight {
-    font-size: 115%;
-    font-weight: 700;
-    color: #efefef;
-  }
-
-  .redbull {
-    color: rgba(251, 90, 104, 0.774);
-  }
-
-  .about--header-hr {
-    margin: 0 auto;
-    margin-bottom: 4%;
-    width: 10%;
-    border-color: $text-title;
+  p {
+    color: white;
   }
 
   .about {
-    margin: 0 auto;
-    padding: 8% 0;
-    padding-bottom: 3%;
+    max-width: 1340px;
+    margin: 100px auto;
+    padding: 200px 0;
     text-align: center;
   }
 
   .about--wrapper {
-    padding: 5% 15%;
+    padding: 0;
     text-align: left;
     color: $text-title;
   }
@@ -102,18 +80,25 @@
     padding: 3%;
     padding-bottom: 1%;
     text-align: center;
-    font-size: 250%;
+    font-size: 35px;
+    font-family: 'Quattrocento', serif;
+  }
+
+  .about--header-hr {
+    margin: 0 auto;
+    width: 10%;
+    border-color: $text-title;
   }
 
   .about--container {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
+    padding-top: 50px;
   }
 
   .about--left-col-wrapper {
-    width: 25%;
-
+    width: 30%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -137,17 +122,23 @@
 
       border-radius: 10px 0px 0px 10px;
       transition: all 0.5s;
-      opacity: .8;
+      opacity: 1;
 
       &:hover {
         background-color: $hover-color;
-        opacity: 1;
+        opacity: .8;
       }
     }
   }
+
+  .about--image-im {
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px rgb(255 239 239 / 21%), 10px 10px rgb(255 239 239 / 16%), 15px 15px rgb(255 239 239 / 22%);
+  }
   
   .about--right-col-wrapper {
-    width: 75%;
+    width: 70%;
     padding: 0 3%;
     display: inline-block !important;
     
@@ -163,18 +154,24 @@
 
   .about--right-col-block-body {
     padding-bottom: 12%;
-    font-size: 113%
   }
 
   .about--right-col-block-body-text {
-    padding-bottom: 1%;
-    letter-spacing: .7px;
+    padding-bottom: 20px;
+    letter-spacing: .4px;
+    font-size: 18px;
+    font-family: 'Quattrocento', serif;
   }
 
-  .about--image-im {
-    width: 100%;
-    height: 100%;
-    box-shadow: 12px 12px #ffefef47;
+  .highlight {
+    font-size: 115%;
+    font-weight: 700;
+    color: #efefef;
+    box-shadow: 0px 2px rgb(255 239 239 / 33%), 0px 4px rgb(255 239 239 / 16%);
+  }
+
+  .redbull {
+    color: rgba(251, 90, 104, 0.774);
   }
 
   .about--image-block-text {
@@ -186,10 +183,124 @@
     }
   }
 
+  @keyframes fadeIn-about {
+    0% { opacity: 0; transform: translateY(5%);}
+    50% { opacity: 0; transform: translateY(5%);}
+    100% { opacity: 1; transform: translateY(0%);}
+  }
 
-  @media only screen and (max-width: 640px) {
-    .about--wrapper {
-      padding: 0;
+  .about--header, .about--header-hr {
+    animation: fadeIn-about 1s ;
+  }
+
+  .about--container {
+    animation: fadeIn-about 1.5s ;
+  }
+
+  @media only screen and (min-width: 1221px) and (max-width: 1450px)  {
+    .about {
+      max-width: 1340px;
+      margin: 100px 50px;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 1040px) and (max-width: 1221px)  {
+    .about {
+      max-width: 1340px;
+      margin: 100px 50px;
+      text-align: center;
+    }
+
+    .about--right-col-block-body-text {
+      padding-bottom: 20px;
+      letter-spacing: .4px;
+      font-size: 16px;
+      font-family: 'Quattrocento', serif;
+    }
+  }
+
+  @media only screen and (min-width: 930px) and (max-width: 1040px)  {
+
+    .about {
+      margin: 100px 50px;
+    }
+
+    .about--left-col-wrapper {
+      width: 40%;
+    }
+
+    .about--right-col-wrapper {
+      width: 60%;
+    }
+
+    .about--right-col-block-body-text {
+      padding-bottom: 20px;
+      letter-spacing: .4px;
+      font-size: 16px;
+      font-family: 'Quattrocento', serif;
+    }
+  }
+
+  @media only screen and (min-width: 500px) and (max-width: 930px)  {
+
+    .about {
+      margin: 100px 50px;
+    }
+
+    .about--container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .about--left-col-wrapper {
+      width: 300px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+
+    .about--right-col-wrapper {
+      width: 100%;
+    }
+
+    .about--right-col-block-body-text {
+      padding-bottom: 20px;
+      letter-spacing: .4px;
+      font-size: 16px;
+      font-family: 'Quattrocento', serif;
+    }
+  }
+
+  @media only screen and (max-width: 500px)  {
+
+    .about {
+      margin: 100px 20px;
+    }
+
+    .about--container {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .about--left-col-wrapper {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 40px;
+    }
+
+    .about--right-col-wrapper {
+      width: 100%;
+    }
+
+    .about--right-col-block-body-text {
+      padding-bottom: 20px;
+      letter-spacing: .4px;
+      font-size: 100%;
+      font-family: 'Quattrocento', serif;
     }
   }
 

@@ -4,7 +4,7 @@
       <div class="bh--header">
         <div class="bh--header-name">Luis G. Chinchilla-Garcia</div>
         <div class="bh--header-text">
-          <p class="bh--header-text-var">I am</p>
+          <p class="bh--header-text-var">I am </p>
           <div class="bh--header-text-descr"></div>
         </div>
       </div>
@@ -20,13 +20,20 @@
     </div>
 
     <div class="bh--downarrow">
-      <DownArrow v-scroll-to="{ el: '#About' }" />
+      <DownArrow v-scroll-to="{ el: scrollTo }" />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    scrollTo: {
+      type: String,
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -51,16 +58,17 @@ export default {};
   margin-top: 500px;
   text-align: left;
   animation: fadeIn-header 0.5s;
+  font-family: 'Marcellus', serif;
 }
 
 .bh--header-name {
   font-size: 40px;
-  animation: fadeIn-header 4s;
+  animation: fadeIn-header 2s;
 }
 
 .bh--header-text-descr:before {
   content: "";
-  animation: words linear infinite 9s;
+  animation: words linear infinite 15s 2s;
 }
 
 h2 {
@@ -70,13 +78,14 @@ h2 {
 .bh--header-text {
   display: flex;
   padding: 5px 0;
-  animation: fadeIn-header-text 1s;
+  animation: fadeIn-header-text 2s;
 }
 
 .bh--header-text-var {
   text-align: left;
   font-size: 30px;
   white-space: pre;
+  color: white;
 }
 
 .bh--header-text-descr {
@@ -99,8 +108,8 @@ h2 {
     position: absolute;
     border-radius: 50% + random(5);
     margin-left: -1040px;
-    animation: bh--shoot-#{$i} random(3) * 3.5 + 0.8s linear infinite;
-    animation-delay: $i * 0.4s;
+    animation: bh--shoot-#{$i} random(3) * 3.5 + 4.2s linear infinite;
+    animation-delay: $i * 0.6s;
   }
 
   @keyframes bh--shoot-#{$i} {

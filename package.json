@@ -20,6 +20,7 @@
     "vuesax": "^4.0.1-alpha.25"
   },
   "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.2",
     "node-sass": "^4.14.1",
     "push-dir": "^0.4.1",
     "sass-loader": "^10.0.2"

@@ -5,8 +5,10 @@
     </div>
 
     <div class="main--introduction">
-      <BlackHoleBackground />
+      <BlackHoleBackground scrollTo="#About" />
     </div>
+
+    <!-- <AboutMeTest /> -->
 
     <div
       class="main--about"
