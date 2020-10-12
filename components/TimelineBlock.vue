@@ -57,7 +57,7 @@
       return {
         blockData: [
           {
-            title: 'Study of Filments Near the Galactic Center', 
+            title: 'Study of Filaments Near the Galactic Center', 
             subtitle: 'Astrophysics Research: UCLA',
             date: "(2014-2018)",
             body: 'Conducted image processing and statistical analysis on data take by space telescopes WISE and SPITZER on gas filaments AFGL-5376 and Double Helix Nebula in the Galactic Center.'
