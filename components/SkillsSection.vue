@@ -91,7 +91,7 @@ export default {
       tabs: [
         {
           title:
-            "For Machine Learning Engineering, some of my responsabilities have included:",
+            "For Machine Learning Engineering, some of my responsibilities have included:",
           value: "One",
           body: [
             "Actively researching and prototyping machine learning models to personalize product recommendations",
@@ -252,6 +252,10 @@ ul, ol {
 
 .skills--right-col-block-body {
   padding-bottom: 12%;
+}
+
+.skills--right-col-block p {
+  font-size: 16px;
 }
 
 .skills--right-col-block-body-li {
@@ -499,6 +503,10 @@ ul, ol {
   .active {
     border-right: none !important;
     border-bottom: 2px solid #64ffda !important;
+  }
+
+  .skills--right-col-block p {
+    font-size: 16px;
   }
 
 }
