@@ -236,7 +236,7 @@ ul, ol {
   padding: 0 3%;
   color: $text-color;
   display: inline-block !important;
-  height: 350px;
+  height: 450px;
 
   display: flex;
   justify-content: center;
@@ -288,7 +288,7 @@ ul, ol {
 .skills--left-col-wrapper {
   width: 25%;
   padding: 0 3%;
-  padding-bottom: 100px;
+  padding-bottom: 200px;
   color: $text-color;
 
   display: flex;
