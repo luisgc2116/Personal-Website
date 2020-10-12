@@ -472,7 +472,6 @@ ul, ol {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding-top: 50px;
   }
 
   .skills--left-col-wrapper {
@@ -491,7 +490,7 @@ ul, ol {
   .skills--radio-btn {
     flex-basis: 25%;
     flex-grow: 0;
-    line-height: 50% !important;
+    line-height: 40% !important;
     border-radius: 0 !important;
   }
   
