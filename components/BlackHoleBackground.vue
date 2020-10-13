@@ -409,7 +409,7 @@ $bh--stars: 300;
     position: absolute;
     border-radius: 70% + random(5);
     margin-left: -1040px;
-    animation: bh--shoot2-#{$i} random(3) * 3.5 + 2.2s linear infinite;
+    animation: bh--shoot2-#{$i} random(3) + 4.2s linear infinite;
     animation-delay: $i * 0.6s;
   }
 
