@@ -416,7 +416,7 @@ $bh--stars: 300;
   @keyframes bh--shoot2-#{$i} {
     0% {
       margin-left: 0px;
-      margin-top: 50px;
+      margin-top: 100px + random(150);;
       width: 8px;
       height: 8px;
     }
@@ -427,7 +427,7 @@ $bh--stars: 300;
     }
     100% {
       margin-left: 60%;
-      margin-top: 100px + random(2);
+      margin-top: 300px + random(50);
       width: 0px;
       height: 0px;
     }
