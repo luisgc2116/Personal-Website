@@ -410,7 +410,7 @@ $bh--stars: 300;
     border-radius: 70% + random(5);
     margin-left: -1040px;
     animation: bh--shoot2-#{$i} random(3) + 4.2s linear infinite;
-    animation-delay: $i * 0.6s;
+    animation-delay: $i * 0.8s;
   }
 
   @keyframes bh--shoot2-#{$i} {
