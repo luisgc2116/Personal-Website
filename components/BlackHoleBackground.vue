@@ -416,18 +416,18 @@ $bh--stars: 300;
   @keyframes bh--shoot2-#{$i} {
     0% {
       margin-left: 0px;
-      margin-top: 100px + random(10);
+      margin-top: 100px + random(30);
       width: 8px;
       height: 8px;
     }
     50% {
-      margin-top: 50px;
+      margin-top: 100px + random(30) ;
       width: 8px;
       height: 8px;
     }
     100% {
       margin-left: 60%;
-      margin-top: 300px + random(50);
+      margin-top: 250px + random(50);
       width: 0px;
       height: 0px;
     }
