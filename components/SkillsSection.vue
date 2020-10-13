@@ -96,7 +96,7 @@ export default {
           body: [
             "Actively researching and prototyping machine learning models to personalize product recommendations",
             "Deploying machine learning models on cloud services as part of an end-to- end machine learning workflow",
-            "Developing & maintaning end-to-end machine learning pipelines that are scalable and cost effective",
+            "Developing & maintaining end-to-end machine learning pipelines that are scalable and cost effective",
           ],
           tags: [
             "Tensorflow",
@@ -108,7 +108,7 @@ export default {
         },
         {
           title:
-            "For Data Engineering, some of my responsabilities have included:",
+            "For Data Engineering, some of my responsibilities have included:",
           value: "Two",
           body: [
             "Deploying machine learning models on cloud services as part of an end-to- end machine learning workflow",
@@ -129,7 +129,7 @@ export default {
         },
         {
           title:
-            "For Data Analysis, some of my responsabilities have included:",
+            "For Data Analysis, some of my responsibilities have included:",
           value: "Three",
           body: [
             "Creating repeatable exploratory data analysis in Jupyter notebooks, with visualizations to aid the story-telling process of data",
@@ -148,7 +148,7 @@ export default {
         },
         {
           title:
-            "For Web Development, some of my responsabilities have included:",
+            "For Web Development, some of my responsibilities have included:",
           value: "Four",
           body: [
             "Implementing major features that increased scalability while reducing latency",
