@@ -396,7 +396,7 @@ $bh--stars: 300;
   }
 
   .bh--header-text-descr, .bh--header-text-var {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   @for $i from 1 through 8 {
@@ -427,7 +427,7 @@ $bh--stars: 300;
     }
     100% {
       margin-left: 60%;
-      margin-top: 0px - random(2);
+      margin-top: 100px + random(2);
       width: 0px;
       height: 0px;
     }
